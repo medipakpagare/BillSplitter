@@ -20,16 +20,14 @@ const billCalculator = () => {
 
   tipYes.addEventListener("click", function () {
     container.style.display = "";
-
-    Tip.addEventListener("change", function () {
+    document.getElementById("tip_section_Id").style.display = "";
       calcBtn.addEventListener("click", function () {
         var calc = parseFloat(mealAmount.value) / parseFloat(People.value);
-
         rightPara.innerHTML = `Your share will be ₹${(
           calc + parseFloat(Tip.value)
-        ).toFixed(0)} of each.`;
+        ).toFixed(2)} of each.`;
       });
-    });
+ 
   });
 
   //Excluding tip
@@ -38,13 +36,13 @@ const billCalculator = () => {
     container.style.display = "block";
 
     //calculation
-    People.addEventListener("change", function () {
+   
       calcBtn.addEventListener("click", function () {
         rightPara.innerHTML = `Your share will be ₹ ${(
           parseFloat(mealAmount.value) / parseFloat(People.value)
-        ).toFixed(0)} of each.`;
+        ).toFixed(2)} of each.`;
       });
-    });
+  
   });
 };
 billCalculator();
