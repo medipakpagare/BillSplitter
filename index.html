@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Calculate your meal cost including or excluding tip</h1>
+   
+    <main class="main">
+        <div class="left">
+
+            <p>Want to include tip?</p>
+            <label for="tip_radio">Yes</label>
+            <input type="radio" name="tip_radio" id="tip_radio">
+            <label for="tip_radio_2">No</label>
+            <input type="radio" name="tip_radio" id="tip_radio_2"><br><br>
+            <section class="container" id="containerId">
+                <label for="bill">Total Bill</label><br>
+                <input autocomplete="off" value="" placeholder="enter amout" name="bill" id="billId">
+                <br><br>
+                <label for="people">Number of People</label><br>
+                <input autocomplete="off" value="" placeholder="enter number of people" name="people" id="peopleId"> <br><br>
+                <section class="tip_section" id='tip_section_Id'>
+                <label for="tip">Enter Tip Amount</label><br>
+                <input autocomplete="off" value="" placeholder="enter tip amount" name="tip" id="tipId">
+            </section><br>
+            <button type="submit" id="calc_btn" class="calculate">Calculate</button>
+
+        </div>
+            </section><br>
+           
+        <div class="right">
+            
+            <p id="right_para"></p>
+      
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
