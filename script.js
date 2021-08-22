@@ -25,7 +25,7 @@ const billCalculator = () => {
         var calc = parseFloat(mealAmount.value) / parseFloat(People.value);
         rightPara.innerHTML = `Your share will be ₹${(
           calc + parseFloat(Tip.value)
-        ).toFixed(2)} of each.`;
+        ).toFixed(2)} of each (including tip).`;
       });
  
   });
@@ -40,7 +40,7 @@ const billCalculator = () => {
       calcBtn.addEventListener("click", function () {
         rightPara.innerHTML = `Your share will be ₹ ${(
           parseFloat(mealAmount.value) / parseFloat(People.value)
-        ).toFixed(2)} of each.`;
+        ).toFixed(2)} of each (excluding tip).`;
       });
   
   });
