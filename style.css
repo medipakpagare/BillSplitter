@@ -45,7 +45,7 @@ display: flex;height: 8rem;width: 30rem;justify-content: space-evenly;align-item
 }
 @media screen and (max-width:650px) {
     .logo_container{
-        flex-direction: column;height: auto;width: 8rem;margin: 2rem;
+        flex-direction: column;height: auto;width: 8rem;margin: 2rem;position: relative;left: 4rem;
     }
     .logo_container img{
       margin: 1rem;height:4rem;width: auto;
