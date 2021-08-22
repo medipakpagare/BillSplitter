@@ -15,39 +15,36 @@ const billCalculator = () => {
 
   //code for input section
   //Including tip
-  var tipYes = radioBtn; 
+  var tipYes = radioBtn;
   var tipNo = secondRadioBtn;
-
 
   tipYes.addEventListener("click", function () {
     container.style.display = "";
 
-   Tip.addEventListener("change", function () {
-    calcBtn.addEventListener('click',function(){
+    Tip.addEventListener("change", function () {
+      calcBtn.addEventListener("click", function () {
+        var calc = parseFloat(mealAmount.value) / parseFloat(People.value);
 
-      var calc =parseFloat(mealAmount.value) / parseFloat(People.value);
-    
-      rightPara.innerHTML = `Your share will be ₹${calc + parseFloat(Tip.value)} of each.`;
+        rightPara.innerHTML = `Your share will be ₹${(
+          calc + parseFloat(Tip.value)
+        ).toFixed(0)} of each.`;
+      });
     });
-    });
-   
   });
 
   //Excluding tip
- 
   tipNo.addEventListener("click", function () {
     document.getElementById("tip_section_Id").style.display = "none";
     container.style.display = "block";
 
     //calculation
-   
     People.addEventListener("change", function () {
-      calcBtn.addEventListener('click',function(){
-      rightPara.innerHTML =`Your share will be ₹ ${parseFloat(mealAmount.value) / parseFloat(People.value)} of each.`;
-    
+      calcBtn.addEventListener("click", function () {
+        rightPara.innerHTML = `Your share will be ₹ ${(
+          parseFloat(mealAmount.value) / parseFloat(People.value)
+        ).toFixed(0)} of each.`;
+      });
     });
-  })
   });
-
 };
 billCalculator();
