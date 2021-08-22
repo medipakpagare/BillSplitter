@@ -29,7 +29,7 @@ input{
     padding: .4rem;border:1px solid black;outline: none;
 }
 .calculate{
-    padding: .3rem;font-size: 1.6rem;background-color: green;color: white;margin-top: 2rem;
+    padding: .3rem;font-size: 1.6rem;background-color: green;color: white;margin-top: 2rem;outline:none;
 }
 .calculate:hover{
     background-color: black;
